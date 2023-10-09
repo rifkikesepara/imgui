@@ -28,8 +28,8 @@ project "ImGui"
 	includedirs
 	{
 		"../imgui",
-		"../glfw/include",
-		"ImGuzimo"
+		"../glfw/include"
+
 	}
 
 	filter "system:windows"
