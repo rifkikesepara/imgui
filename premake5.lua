@@ -6,6 +6,8 @@ project "ImGui"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	IncludeDir["ImGuizmo"]="ImGuizmo"
+
 	files
 	{
 		"imconfig.h",
@@ -22,7 +24,16 @@ project "ImGui"
 		"backends/imgui_impl_opengl3.cpp",
 		"backends/imgui_impl_opengl3.h",
 		"backends/imgui_impl_glfw.cpp",
-		"backends/imgui_impl_glfw.h"
+		"backends/imgui_impl_glfw.h",
+		"%{IncludeDir.ImGuizmo}/ImCurveEdit.cpp",
+		"%{IncludeDir.ImGuizmo}/ImCurveEdit.h",
+		"%{IncludeDir.ImGuizmo}/ImGradient.cpp",
+		"%{IncludeDir.ImGuizmo}/ImGradient.h",
+		"%{IncludeDir.ImGuizmo}/ImGuizmo.cpp",
+		"%{IncludeDir.ImGuizmo}/ImGuizmo.h",
+		"%{IncludeDir.ImGuizmo}/ImSequencer.cpp",
+		"%{IncludeDir.ImGuizmo}/ImSequencer.h"
+
 	}
 
 	includedirs
